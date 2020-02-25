@@ -1,0 +1,29 @@
+<script>
+    var i = 0;
+    var images = [];
+    var time = 3000;
+    
+    
+    images[0] = 'https://cdn.britannica.com/67/19367-050-885866B4/Valley-Taurus-Mountains-Turkey.jpg';
+    images[1] = 'https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/66/14/d8/kangchenjunga.jpg';
+    images[2] = 'https://lp-cms-production.imgix.net/2019-06/12dec8938220093eb7f1fdb8a9ce40b8-the-rocky-mountains.jpg?fit=crop&q=40&sharp=10&vib=20&auto=format&ixlib=react-8.6.4';
+    
+    
+    function changeImg(){
+        document.slide.src = images[i];
+    
+        if(i < images.length - 1){
+            i++;
+        } else {
+            i = 0;
+        }
+    
+        setTimeout("changeImg()", time);
+    }
+    
+    window.onload = changeImg;
+    
+    </script>
+    
+    
+    <img name="slide" width="800" height="400">
